@@ -4,7 +4,7 @@ public class Publicacion {
 	
 	private String foto;
 	
-	public Publicacion(String foto) {
+	public Publicacion(String nombreUsuario, String foto) {
 		super();
 		this.foto = foto;
 	}

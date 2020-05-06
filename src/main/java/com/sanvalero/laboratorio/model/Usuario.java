@@ -30,13 +30,13 @@ public class Usuario {
 	/**
 	 * Método que comparte una foto al perfil del usuario correspondiente
 	 * @param nombreUsuario
-	 * @param publicacion
+	 * @param foto
 	 */
-	public void compartirFoto(String nombreUsuario, Publicacion publicacion) {
+	public void compartirFoto(String nombreUsuario, String foto) {
 			
-		Publicacion miPublicacion = new Publicacion(nombreUsuario);
+		Publicacion miPublicacion = new Publicacion(nombreUsuario, foto);
 		publicaciones.add(miPublicacion);	
-		Publicacion.notificar(getNombreUsuario());		
+		Publicacion.notificar(nombreUsuario);		
 	}
 	
 	/**
@@ -108,7 +108,22 @@ public class Usuario {
 
 	public void setMensajesRecibidos(List<Mensaje> mensajesRecibidos) {
 		this.mensajesRecibidos = mensajesRecibidos;
-	}	
+	}
 
+	public List<DescripcionPrenda> getDescripciones() {
+		return descripciones;
+	}
+
+	public void setDescripciones(List<DescripcionPrenda> descripciones) {
+		this.descripciones = descripciones;
+	}
+
+	public List<Publicacion> getPublicaciones() {
+		return publicaciones;
+	}
+
+	public void setPublicaciones(List<Publicacion> publicaciones) {
+		this.publicaciones = publicaciones;
+	}	
 	
 }
